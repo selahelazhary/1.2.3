@@ -1,0 +1,3144 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إختبارات سلاح الأزهري - نظام الاختبارات الإلكترونية</title>
+    <meta name="description" content="نظام متكامل للاختبارات الإلكترونية لطلبة الأزهر الشريف">
+    <meta name="keywords" content="اختبارات, الأزهر, تعليم, اختبارات إلكترونية, سلاح الأزهري">
+    <meta name="author" content="إختبارات سلاح الأزهري">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdyuIMWOk4qbKO_qCaKOHo859JMs3To_OJjpQ8u5fU0ULewA-AdNp7Izuv9PUOIOTGTUsNM6DTVVbRWKe2OEDTBcHnxOnOrCylsq_V3YhUFPqTkPJ7XOuzWzbCXKW-UnoLEwqsE8XjaHiWPZu2dC_pESia4uQOATzelupKDAUbuO1_jH2003wsgUO0PPiO/s1080/Selah%20Elazhary%20Transperant%20logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* تصميم iOS محسن */
+        :root {
+            --ios-primary: #007AFF;
+            --ios-primary-light: #66AFFF;
+            --ios-primary-dark: #0056CC;
+            --ios-secondary: #5856D6;
+            --ios-success: #34C759;
+            --ios-success-light: #6DDC87;
+            --ios-danger: #FF3B30;
+            --ios-danger-light: #FF6960;
+            --ios-warning: #FF9500;
+            --ios-warning-light: #FFB340;
+            --ios-light: #F2F2F7;
+            --ios-light-2: #E5E5EA;
+            --ios-light-3: #D1D1D6;
+            --ios-dark: #1C1C1E;
+            --ios-dark-2: #2C2C2E;
+            --ios-dark-3: #3A3A3C;
+            --ios-text-primary: #000000;
+            --ios-text-secondary: #8E8E93;
+            --ios-text-tertiary: #C7C7CC;
+            --ios-card-bg: #FFFFFF;
+            --ios-card-bg-dark: #1C1C1E;
+            --ios-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --ios-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+            --ios-radius: 14px;
+            --ios-radius-lg: 20px;
+            --ios-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --ios-safe-area-top: env(safe-area-inset-top);
+            --ios-safe-area-bottom: env(safe-area-inset-bottom);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, 'Tajawal', 'Segoe UI', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--ios-light);
+            color: var(--ios-text-primary);
+            line-height: 1.5;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            padding-top: var(--ios-safe-area-top);
+            padding-bottom: var(--ios-safe-area-bottom);
+        }
+
+        .ios-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        /* Header Styles - iOS Design */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 0;
+            margin-bottom: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(242, 242, 247, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid var(--ios-light-3);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: var(--ios-transition);
+            text-decoration: none;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ios-primary);
+            user-select: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-img {
+            height: 40px;
+            transition: var(--ios-transition);
+        }
+
+        .logo-container:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        /* Card Styles - iOS Design */
+        .ios-card {
+            background: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            box-shadow: var(--ios-shadow);
+            padding: 20px;
+            transition: var(--ios-transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .ios-card:hover {
+            box-shadow: var(--ios-shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        /* Year Selection - iOS Design */
+        .year-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .ios-year-card, .ios-section-card, .ios-subject-card {
+            background: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            box-shadow: var(--ios-shadow);
+            padding: 24px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--ios-transition);
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .ios-year-card:hover, .ios-section-card:hover, .ios-subject-card:hover {
+            box-shadow: var(--ios-shadow-lg);
+            transform: translateY(-4px);
+            border-color: var(--ios-primary-light);
+        }
+
+        .ios-year-card i, .ios-section-card i, .ios-subject-card i {
+            font-size: 40px;
+            color: var(--ios-primary);
+            transition: var(--ios-transition);
+        }
+
+        .ios-year-card h3, .ios-section-card h3, .ios-subject-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--ios-text-primary);
+        }
+
+        .ios-year-card p, .ios-section-card p, .ios-subject-card p {
+            color: var(--ios-text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .ios-year-card.selected, .ios-section-card.selected, .ios-subject-card.selected {
+            background: var(--ios-primary);
+            color: white;
+            transform: scale(1.02);
+        }
+
+        .ios-year-card.selected i, .ios-section-card.selected i, .ios-subject-card.selected i,
+        .ios-year-card.selected p, .ios-section-card.selected p, .ios-subject-card.selected p {
+            color: white;
+        }
+
+        /* Section Grid - iOS Design */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .ios-section-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Quiz Container - iOS Design */
+        .ios-quiz-container {
+            background: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            box-shadow: var(--ios-shadow);
+            padding: 20px;
+            margin-bottom: 24px;
+            display: none;
+            animation: iosSlideUp 0.4s ease-out;
+        }
+
+        .ios-quiz-header {
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 0.5px solid var(--ios-light-3);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ios-quiz-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+            color: var(--ios-primary);
+            font-weight: 600;
+        }
+
+        .ios-timer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            color: var(--ios-primary);
+            background: rgba(0, 122, 255, 0.1);
+            padding: 8px 12px;
+            border-radius: 20px;
+            align-self: flex-start;
+        }
+
+        .ios-timer i {
+            font-size: 1rem;
+        }
+
+        .ios-timer.warning {
+            color: var(--ios-warning);
+            background: rgba(255, 149, 0, 0.1);
+            animation: iosPulse 1s infinite;
+        }
+
+        .ios-timer.danger {
+            color: var(--ios-danger);
+            background: rgba(255, 59, 48, 0.1);
+            animation: iosPulse 0.5s infinite;
+        }
+
+        .ios-progress-container {
+            width: 100%;
+            height: 6px;
+            background-color: var(--ios-light-3);
+            border-radius: 3px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .ios-progress-bar {
+            height: 100%;
+            background: var(--ios-primary);
+            width: 0%;
+            transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+            border-radius: 3px;
+        }
+
+        /* Question Styles - iOS Design */
+        .ios-question {
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(0, 122, 255, 0.03);
+            border-radius: var(--ios-radius);
+            border-left: 4px solid var(--ios-primary);
+        }
+
+        .ios-question h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            color: var(--ios-text-primary);
+            font-weight: 500;
+        }
+
+        .ios-question-number {
+            display: inline-flex;
+            width: 30px;
+            height: 30px;
+            background: var(--ios-primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+
+        .ios-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .ios-option {
+            padding: 16px 18px;
+            border: 1px solid var(--ios-light-3);
+            border-radius: var(--ios-radius);
+            cursor: pointer;
+            transition: var(--ios-transition);
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: white;
+        }
+
+        .ios-option:hover {
+            background-color: rgba(0, 122, 255, 0.05);
+            border-color: var(--ios-primary-light);
+        }
+
+        .ios-option.selected {
+            background-color: var(--ios-primary);
+            color: white;
+            border-color: var(--ios-primary-dark);
+        }
+
+        .ios-option.correct {
+            background-color: rgba(52, 199, 89, 0.1);
+            border-color: var(--ios-success);
+            color: var(--ios-text-primary);
+        }
+
+        .ios-option.incorrect {
+            background-color: rgba(255, 59, 48, 0.1);
+            border-color: var(--ios-danger);
+            color: var(--ios-text-primary);
+        }
+
+        .ios-option-icon {
+            margin-right: auto;
+            opacity: 0;
+            transition: var(--ios-transition);
+            font-size: 1.1rem;
+        }
+
+        .ios-option.selected .ios-option-icon,
+        .ios-option.correct .ios-option-icon,
+        .ios-option.incorrect .ios-option-icon {
+            opacity: 1;
+        }
+
+        .ios-option.correct .ios-option-icon {
+            color: var(--ios-success);
+        }
+
+        .ios-option.incorrect .ios-option-icon {
+            color: var(--ios-danger);
+        }
+
+        .ios-true-false-options {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .ios-true-false-btn {
+            flex: 1;
+            padding: 16px;
+            border: 1px solid var(--ios-light-3);
+            border-radius: var(--ios-radius);
+            cursor: pointer;
+            transition: var(--ios-transition);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: white;
+            font-weight: 500;
+        }
+
+        .ios-true-false-btn:hover {
+            background-color: rgba(0, 122, 255, 0.05);
+            border-color: var(--ios-primary-light);
+        }
+
+        .ios-true-false-btn.selected {
+            background-color: var(--ios-primary);
+            color: white;
+            border-color: var(--ios-primary-dark);
+        }
+
+        /* Navigation Buttons - iOS Design */
+        .ios-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            gap: 12px;
+        }
+
+        .ios-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: var(--ios-radius);
+            cursor: pointer;
+            transition: var(--ios-transition);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ios-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .ios-btn:hover::before {
+            left: 100%;
+        }
+
+        .ios-btn-primary {
+            background: var(--ios-primary);
+            color: white;
+        }
+
+        .ios-btn-primary:hover {
+            background: var(--ios-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .ios-btn-secondary {
+            background-color: var(--ios-light-2);
+            color: var(--ios-text-primary);
+        }
+
+        .ios-btn-secondary:hover {
+            background-color: var(--ios-light-3);
+            transform: translateY(-2px);
+        }
+
+        .ios-btn-success {
+            background: var(--ios-success);
+            color: white;
+        }
+
+        .ios-btn-success:hover {
+            background: var(--ios-success-light);
+            transform: translateY(-2px);
+        }
+
+        .ios-btn-danger {
+            background: var(--ios-danger);
+            color: white;
+        }
+
+        .ios-btn-danger:hover {
+            background: var(--ios-danger-light);
+            transform: translateY(-2px);
+        }
+
+        .ios-btn-warning {
+            background: var(--ios-warning);
+            color: white;
+        }
+
+        .ios-btn-warning:hover {
+            background: var(--ios-warning-light);
+            transform: translateY(-2px);
+        }
+
+        .ios-btn-sm {
+            padding: 10px 16px;
+            font-size: 0.85rem;
+        }
+
+        /* Results Container - iOS Design */
+        .ios-results-container {
+            background: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            box-shadow: var(--ios-shadow);
+            padding: 24px;
+            margin-bottom: 24px;
+            display: none;
+            text-align: center;
+            animation: iosScaleIn 0.4s ease-out;
+        }
+
+        .ios-results-container h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: var(--ios-primary);
+            font-weight: 700;
+        }
+
+        .ios-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .ios-stat-item {
+            background: var(--ios-light);
+            border-radius: var(--ios-radius);
+            padding: 20px 16px;
+            text-align: center;
+            transition: var(--ios-transition);
+            border: 0.5px solid var(--ios-light-3);
+        }
+
+        .ios-stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--ios-shadow);
+        }
+
+        .ios-stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--ios-primary);
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+
+        .ios-stat-label {
+            font-size: 0.9rem;
+            color: var(--ios-text-secondary);
+            font-weight: 500;
+        }
+
+        .ios-feedback {
+            text-align: right;
+            margin-bottom: 24px;
+            background: var(--ios-light);
+            padding: 20px;
+            border-radius: var(--ios-radius);
+            max-height: 300px;
+            overflow-y: auto;
+            border: 0.5px solid var(--ios-light-3);
+        }
+
+        .ios-feedback h3 {
+            margin-bottom: 16px;
+            color: var(--ios-primary);
+            font-size: 1.2rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--ios-primary-light);
+        }
+
+        .ios-feedback ul {
+            list-style-type: none;
+        }
+
+        .ios-feedback li {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 0.5px solid var(--ios-light-3);
+            animation: iosFadeIn 0.4s ease-out;
+        }
+
+        .ios-feedback li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Back Button - iOS Design - تغيير من دائري إلى مربع */
+        .ios-back-btn {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            width: 60px;
+            height: 60px;
+            background: var(--ios-primary);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--ios-shadow-lg);
+            transition: var(--ios-transition);
+            z-index: 100;
+            display: none;
+        }
+
+        .ios-back-btn:hover {
+            transform: scale(1.1);
+            background: var(--ios-primary-dark);
+        }
+
+        .ios-back-btn i {
+            font-size: 20px;
+        }
+
+        /* Admin Panel - iOS Design */
+        .ios-admin-panel {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 320px;
+            height: 100vh;
+            background: var(--ios-card-bg);
+            color: var(--ios-text-primary);
+            z-index: 1000;
+            transition: var(--ios-transition);
+            overflow-y: auto;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+            display: none;
+            border-right: 0.5px solid var(--ios-light-3);
+        }
+
+        .ios-admin-panel.active {
+            left: 0;
+            display: block;
+        }
+
+        .ios-admin-header {
+            padding: 20px;
+            background-color: var(--ios-primary);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .ios-admin-header h2 {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .ios-close-admin {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--ios-transition);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ios-close-admin:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .ios-admin-sidebar {
+            width: 70px;
+            background-color: var(--ios-light);
+            height: calc(100vh - 80px);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            border-right: 0.5px solid var(--ios-light-3);
+        }
+
+        .ios-admin-tab-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: var(--ios-transition);
+            color: var(--ios-text-secondary);
+            background-color: transparent;
+            border: none;
+            position: relative;
+        }
+
+        .ios-admin-tab-btn:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            color: var(--ios-primary);
+        }
+
+        .ios-admin-tab-btn.active {
+            background-color: var(--ios-primary);
+            color: white;
+        }
+
+        .ios-admin-tab-btn i {
+            font-size: 20px;
+        }
+
+        .ios-admin-tab-btn .ios-tooltip {
+            position: absolute;
+            left: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--ios-transition);
+            pointer-events: none;
+        }
+
+        .ios-admin-tab-btn:hover .ios-tooltip {
+            opacity: 1;
+            visibility: visible;
+            left: 65px;
+        }
+
+        .ios-admin-content {
+            margin-right: 70px;
+            padding: 20px;
+        }
+
+        .ios-admin-tab-content {
+            display: none;
+            animation: iosFadeIn 0.3s ease-out;
+        }
+
+        .ios-admin-tab-content.active {
+            display: block;
+        }
+
+        .ios-admin-card {
+            background-color: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 0.5px solid var(--ios-light-3);
+            transition: var(--ios-transition);
+        }
+
+        .ios-admin-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--ios-shadow);
+        }
+
+        .ios-admin-card h3 {
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 0.5px solid var(--ios-light-3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .ios-admin-form {
+            margin-bottom: 24px;
+        }
+
+        .ios-form-group {
+            margin-bottom: 16px;
+        }
+
+        .ios-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--ios-text-primary);
+        }
+
+        .ios-form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 0.5px solid var(--ios-light-3);
+            border-radius: var(--ios-radius);
+            background-color: var(--ios-card-bg);
+            color: var(--ios-text-primary);
+            transition: var(--ios-transition);
+            font-size: 14px;
+        }
+
+        .ios-form-control:focus {
+            outline: none;
+            border-color: var(--ios-primary);
+            box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+        }
+
+        textarea.ios-form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .ios-option-input {
+            margin-bottom: 10px;
+        }
+
+        .ios-btn-admin {
+            background-color: var(--ios-primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--ios-radius);
+            cursor: pointer;
+            transition: var(--ios-transition);
+            font-weight: 500;
+        }
+
+        .ios-btn-admin:hover {
+            background-color: var(--ios-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .ios-questions-list {
+            margin-top: 24px;
+        }
+
+        .ios-question-item {
+            background-color: var(--ios-light);
+            border-radius: var(--ios-radius);
+            padding: 16px;
+            margin-bottom: 16px;
+            border: 0.5px solid var(--ios-light-3);
+            transition: var(--ios-transition);
+        }
+
+        .ios-question-item:hover {
+            background-color: var(--ios-light-2);
+            transform: translateX(4px);
+        }
+
+        .ios-question-item h4 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .ios-question-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--ios-text-secondary);
+        }
+
+        .ios-question-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
+
+        .ios-question-meta i {
+            font-size: 12px;
+        }
+
+        .ios-options-list {
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .ios-option-item {
+            padding: 8px 10px;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 13px;
+            transition: var(--ios-transition);
+        }
+
+        .ios-option-item:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .ios-correct-option {
+            background-color: rgba(52, 199, 89, 0.1);
+            border-left: 3px solid var(--ios-success);
+        }
+
+        .ios-question-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 12px;
+            gap: 8px;
+        }
+
+        .ios-admin-filters {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .ios-admin-filters .ios-form-control {
+            font-size: 13px;
+            padding: 8px 10px;
+        }
+
+        .ios-admin-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .ios-admin-stat-card {
+            background-color: var(--ios-light);
+            border-radius: var(--ios-radius);
+            padding: 16px;
+            text-align: center;
+            border: 0.5px solid var(--ios-light-3);
+            transition: var(--ios-transition);
+        }
+
+        .ios-admin-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--ios-shadow);
+        }
+
+        .ios-admin-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--ios-primary);
+        }
+
+        .ios-admin-stat-label {
+            font-size: 13px;
+            color: var(--ios-text-secondary);
+            font-weight: 500;
+        }
+
+        .ios-setting-item {
+            margin-bottom: 20px;
+        }
+
+        .ios-setting-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--ios-text-primary);
+        }
+
+        .ios-switch-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .ios-switch-label {
+            font-weight: 500;
+        }
+
+        .ios-admin-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+
+        .ios-admin-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .ios-admin-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--ios-light-3);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .ios-admin-slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .ios-admin-slider {
+            background-color: var(--ios-success);
+        }
+
+        input:checked + .ios-admin-slider:before {
+            transform: translateX(22px);
+        }
+
+        /* Modal Styles - iOS Design */
+        .ios-password-modal, .ios-subject-modal, .ios-login-modal, .ios-register-modal, .ios-ad-modal, .ios-section-modal, .ios-edit-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            animation: iosFadeIn 0.3s ease;
+        }
+
+        .ios-modal-box {
+            background-color: var(--ios-card-bg);
+            border-radius: var(--ios-radius-lg);
+            padding: 24px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: var(--ios-shadow-lg);
+            animation: iosModalSlideIn 0.3s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ios-modal-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--ios-primary);
+        }
+
+        .ios-modal-box h3 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--ios-text-primary);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .ios-modal-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        /* Loading Overlay - iOS Design */
+        .ios-loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            color: white;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .ios-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: iosSpin 1s ease-in-out infinite;
+            margin-bottom: 16px;
+        }
+
+        .ios-loading-text {
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .ios-loading-dots::after {
+            content: '';
+            animation: iosDots 1.5s infinite;
+        }
+
+        @keyframes iosDots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        /* Overlay - iOS Design */
+        .ios-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .ios-overlay.active {
+            display: block;
+            animation: iosFadeIn 0.3s ease;
+        }
+
+        /* No Questions Message - iOS Design */
+        .ios-no-questions {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--ios-light);
+            border-radius: var(--ios-radius);
+            margin-bottom: 20px;
+            border: 0.5px solid var(--ios-light-3);
+        }
+
+        .ios-no-questions i {
+            font-size: 40px;
+            color: var(--ios-primary);
+            margin-bottom: 16px;
+        }
+
+        .ios-no-questions h3 {
+            margin-bottom: 12px;
+            color: var(--ios-text-primary);
+            font-size: 1.3rem;
+        }
+
+        .ios-no-questions p {
+            color: var(--ios-text-secondary);
+            line-height: 1.5;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Category Filter - iOS Design */
+        .ios-category-filter {
+            margin-bottom: 20px;
+            background: var(--ios-light);
+            padding: 16px;
+            border-radius: var(--ios-radius);
+            border: 0.5px solid var(--ios-light-3);
+        }
+
+        .ios-category-filter label {
+            margin-left: 10px;
+            font-weight: 500;
+            color: var(--ios-text-primary);
+        }
+
+        /* User Profile - iOS Design */
+        .ios-user-profile {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .ios-user-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--ios-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+            transition: var(--ios-transition);
+        }
+
+        .ios-user-profile:hover .ios-user-avatar {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+        }
+
+        /* Secure Badge - iOS Design */
+        .ios-secure-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--ios-success);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 100;
+            box-shadow: var(--ios-shadow);
+            transition: var(--ios-transition);
+        }
+
+        .ios-secure-badge:hover {
+            transform: translateY(-2px);
+            background: var(--ios-success-light);
+        }
+
+        /* Error Boundary - iOS Design */
+        .ios-error-boundary {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--ios-card-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            z-index: 9999;
+            display: none;
+            text-align: center;
+        }
+
+        .ios-error-boundary i {
+            font-size: 50px;
+            color: var(--ios-danger);
+            margin-bottom: 20px;
+        }
+
+        .ios-error-boundary h2 {
+            margin-bottom: 16px;
+            color: var(--ios-danger);
+            font-size: 1.5rem;
+        }
+
+        .ios-error-boundary p {
+            margin-bottom: 24px;
+            text-align: center;
+            max-width: 400px;
+            color: var(--ios-text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Ad Container Styles - iOS Design */
+        .ios-ad-container {
+            background: linear-gradient(135deg, var(--ios-warning) 0%, var(--ios-warning-light) 100%);
+            color: white;
+            border-radius: var(--ios-radius);
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: var(--ios-shadow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: iosPulse 2s infinite;
+        }
+
+        .ios-ad-container h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .ios-ad-container p {
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .ios-ad-close {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--ios-transition);
+        }
+
+        .ios-ad-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        /* Improved Edit Question Modal - iOS Design */
+        .ios-edit-modal {
+            z-index: 2001;
+        }
+
+        .ios-edit-modal .ios-modal-box {
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .ios-edit-options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .ios-edit-option-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .ios-edit-option-item label {
+            font-weight: 500;
+            color: var(--ios-text-primary);
+        }
+
+        .ios-correct-option-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        /* Improved Loading - iOS Design */
+        .ios-skeleton-loader {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: iosLoading 1.5s infinite;
+            border-radius: 4px;
+        }
+
+        @keyframes iosLoading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Admin Toggle Button - iOS Design - تغيير من دائري إلى مربع */
+        .ios-admin-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: var(--ios-primary);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--ios-shadow-lg);
+            transition: var(--ios-transition);
+            z-index: 100;
+            animation: iosPulse 2s infinite;
+            display: none; /* إخفاء زر الإدارة */
+        }
+
+        .ios-admin-toggle:hover {
+            transform: scale(1.05);
+            background: var(--ios-primary-dark);
+        }
+
+        .ios-admin-toggle i {
+            font-size: 20px;
+        }
+
+        .ios-text-center {
+            text-align: center;
+        }
+
+        .ios-mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .ios-grades-checkboxes {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .ios-grades-checkboxes label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .ios-grades-checkboxes input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* تحسينات تصميم إضافية */
+        .ios-card-enhanced {
+            background: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            box-shadow: var(--ios-shadow);
+            padding: 24px;
+            transition: var(--ios-transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .ios-card-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--ios-primary), var(--ios-secondary));
+        }
+
+        .ios-card-enhanced:hover {
+            box-shadow: var(--ios-shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        /* تحسينات تصميم للأزرار */
+        .ios-btn-enhanced {
+            padding: 14px 24px;
+            border: none;
+            border-radius: var(--ios-radius);
+            cursor: pointer;
+            transition: var(--ios-transition);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ios-btn-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .ios-btn-enhanced:hover::before {
+            left: 100%;
+        }
+
+        .ios-btn-enhanced:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* تحسينات تصميم للشريط العلوي */
+        .ios-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            margin-bottom: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(242, 242, 247, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid var(--ios-light-3);
+        }
+
+        /* تحسينات تصميم للشاشات الصغيرة */
+        .ios-mobile-optimized {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ios-mobile-card {
+            background: var(--ios-card-bg);
+            border-radius: var(--ios-radius);
+            box-shadow: var(--ios-shadow);
+            padding: 20px;
+            transition: var(--ios-transition);
+        }
+
+        .ios-mobile-card:hover {
+            box-shadow: var(--ios-shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        /* تحسينات تصميم للشاشات الكبيرة */
+        @media (min-width: 1024px) {
+            .ios-container {
+                max-width: 1200px;
+            }
+            
+            .year-selection {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .section-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Responsive Styles - iOS Design */
+        @media (max-width: 768px) {
+            .year-selection {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ios-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .ios-stat-item {
+                width: 100%;
+            }
+            
+            .ios-admin-panel {
+                width: 100%;
+                left: -100%;
+            }
+            
+            .ios-admin-filters {
+                grid-template-columns: 1fr;
+            }
+            
+            .ios-admin-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ios-true-false-options {
+                flex-direction: column;
+            }
+            
+            .ios-admin-sidebar {
+                width: 60px;
+            }
+            
+            .ios-admin-content {
+                margin-right: 60px;
+            }
+            
+            .ios-navigation {
+                flex-direction: column;
+            }
+            
+            .ios-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .ios-modal-box {
+                width: 95%;
+                padding: 20px 16px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .logo-img {
+                height: 36px;
+            }
+            
+            .ios-floating-buttons {
+                bottom: 16px;
+                right: 16px;
+            }
+            
+            .ios-floating-btn, .ios-admin-toggle, .ios-back-btn {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Animations - iOS Design */
+        @keyframes iosSpin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes iosFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes iosSlideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes iosScaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes iosModalSlideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        @keyframes iosPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* Medal Styles - iOS Design */
+        .fa-medal {
+            font-size: 24px;
+            margin-right: 6px;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+        }
+        
+        .gold {
+            color: #FFD700;
+        }
+        
+        .silver {
+            color: #C0C0C0;
+        }
+        
+        .bronze {
+            color: #CD7F32;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .no-print, .ios-back-btn, .ios-admin-panel, .ios-overlay, .ios-password-modal, .ios-subject-modal, .ios-secure-badge, .ios-login-floating {
+                display: none !important;
+            }
+            
+            .ios-results-container {
+                display: block !important;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+            
+            .ios-feedback {
+                max-height: none;
+                overflow: visible;
+            }
+            
+            .ios-card, .ios-quiz-container, .ios-results-container {
+                break-inside: avoid;
+            }
+            
+            body {
+                background: white !important;
+            }
+        }
+        
+        /* Custom Scrollbar - iOS Design */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--ios-primary-light);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--ios-primary);
+        }
+        
+        .ios-admin-panel::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        
+        .ios-admin-panel::-webkit-scrollbar-thumb {
+            background: var(--ios-primary);
+        }
+        
+        .ios-admin-panel::-webkit-scrollbar-thumb:hover {
+            background: var(--ios-primary-dark);
+        }
+
+        /* أنيميشن ثلاثي الأبعاد محسن */
+        .ios-card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .ios-card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.1),
+                0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .ios-year-card, .ios-section-card, .ios-subject-card {
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .ios-year-card:hover, .ios-section-card:hover, .ios-subject-card:hover {
+            transform: translateY(-8px) rotateX(2deg) rotateY(2deg) scale(1.02);
+        }
+
+        /* تأثيرات دخول محسنة */
+        @keyframes iosSlideIn3D {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) rotateX(-10deg) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0) scale(1);
+            }
+        }
+
+        .ios-year-card, .ios-section-card, .ios-subject-card {
+            animation: iosSlideIn3D 0.6s ease-out forwards;
+        }
+
+        /* تأثيرات النص المحسنة */
+        .ios-text-glow {
+            text-shadow: 0 0 10px rgba(0, 122, 255, 0.3);
+        }
+
+        /* تأثيرات زر محسنة */
+        .ios-btn-3d {
+            transform-style: preserve-3d;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .ios-btn-3d:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 7px 14px rgba(0, 122, 255, 0.2),
+                0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ios-btn-3d:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        /* تأثيرات الشعار المحسنة */
+        .logo-container {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .logo-img {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .logo-container:hover .logo-img {
+            transform: rotateY(10deg) scale(1.05);
+            filter: drop-shadow(0 4px 8px rgba(0, 122, 255, 0.3));
+        }
+
+        /* تأثيرات التقدم المحسنة */
+        .ios-progress-bar {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ios-progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: iosShine 2s infinite;
+        }
+
+        @keyframes iosShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* تأثيرات المؤقت المحسنة */
+        .ios-timer {
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+        }
+
+        .ios-timer.warning {
+            animation: iosPulse3D 1s infinite;
+        }
+
+        .ios-timer.danger {
+            animation: iosPulse3D 0.5s infinite;
+        }
+
+        @keyframes iosPulse3D {
+            0%, 100% { transform: scale(1) rotateX(0); }
+            50% { transform: scale(1.05) rotateX(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ios-container">
+        <header>
+            <div class="logo-container" id="logo-container">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdyuIMWOk4qbKO_qCaKOHo859JMs3To_OJjpQ8u5fU0ULewA-AdNp7Izuv9PUOIOTGTUsNM6DTVVbRWKe2OEDTBcHnxOnOrCylsq_V3YhUFPqTkPJ7XOuzWzbCXKW-UnoLEwqsE8XjaHiWPZu2dC_pESia4uQOATzelupKDAUbuO1_jH2003wsgUO0PPiO/s1080/Selah%20Elazhary%20Transperant%20logo.png" alt="Logo" class="logo-img">
+                <div class="logo">إختبارات سلاح الأزهري</div>
+            </div>
+        </header>
+        
+        <!-- عرض الإعلان إذا كان موجودًا -->
+        <div id="ios-ad-container" class="ios-ad-container" style="display: none;">
+            <button class="ios-ad-close" id="ios-ad-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 id="ios-ad-title">إعلان</h3>
+            <p id="ios-ad-description">وصف الإعلان</p>
+            <button class="ios-btn ios-btn-warning" id="ios-ad-action">
+                <i class="fas fa-external-link-alt"></i> اضغط هنا
+            </button>
+        </div>
+        
+        <!-- عرض الصفوف الدراسية مباشرة عند فتح التطبيق -->
+        <div id="year-selection-container" class="year-selection">
+            <!-- المرحلة الإعدادية فقط -->
+            <div class="ios-year-card ios-card-3d" data-year="prep1">
+                <i class="fas fa-award"></i>
+                <h3>الصف الأول الإعدادي</h3>
+                <p>إختبارات خاصة بالصف الأول الإعدادي الأزهري</p>
+            </div>
+            <div class="ios-year-card ios-card-3d" data-year="prep2">
+                <i class="fas fa-medal"></i>
+                <h3>الصف الثاني الإعدادي</h3>
+                <p>إختبارات خاصة بالصف الثاني الإعدادي الأزهري</p>
+            </div>
+            <div class="ios-year-card ios-card-3d" data-year="prep3">
+                <i class="fas fa-trophy"></i>
+                <h3>الصف الثالث الإعدادي</h3>
+                <p>إختبارات خاصة بالصف الثالث الإعدادي الأزهري</p>
+            </div>
+        </div>
+        
+        <div id="section-selection-container" class="ios-card" style="display: none;">
+            <h2 class="ios-text-center ios-mb-3">اختر القسم</h2>
+            <div class="section-grid" id="section-container">
+                <!-- سيتم ملؤها ديناميكيًا بناءً على الصف المختار -->
+            </div>
+        </div>
+        
+        <div id="subject-selection-container" class="ios-card" style="display: none;">
+            <h2 class="ios-text-center ios-mb-3">اختر المادة الدراسية</h2>
+            <div class="section-grid" id="subject-container">
+                <!-- سيتم ملؤها ديناميكيًا بناءً على القسم المختار -->
+            </div>
+        </div>
+        
+        <div class="ios-quiz-container" id="ios-quiz-container" style="display: none;">
+            <div class="ios-loading-overlay" id="ios-quiz-loading">
+                <div class="ios-spinner"></div>
+                <div class="ios-loading-text">جاري تحميل الإختبارات...</div>
+            </div>
+            
+            <div class="ios-quiz-header">
+                <h2 id="ios-quiz-title">اختبار إختبارات سلاح الأزهري</h2>
+                <div class="ios-timer" id="ios-timer">
+                    <i class="fas fa-clock"></i>
+                    <span>الوقت المتبقي: 10:00</span>
+                </div>
+                <div class="ios-progress-container">
+                    <div class="ios-progress-bar" id="ios-progress-bar"></div>
+                </div>
+            </div>
+            
+            <div class="ios-category-filter" id="ios-category-filter" style="display: none;">
+                <label for="ios-category-select">تصفية الإختبارات حسب التصنيف:</label>
+                <select id="ios-category-select" class="ios-form-control">
+                    <option value="all">جميع التصنيفات</option>
+                </select>
+            </div>
+            
+            <div id="ios-question-container">
+                <!-- الإختبارات ستظهر هنا ديناميكيًا -->
+            </div>
+            
+            <div class="ios-navigation">
+                <button class="ios-btn ios-btn-secondary ios-btn-3d" id="ios-prev-btn" disabled>
+                    <i class="fas fa-arrow-right"></i> السابق
+                </button>
+                <button class="ios-btn ios-btn-primary ios-btn-3d" id="ios-next-btn">
+                    التالي <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="ios-btn ios-btn-success ios-btn-3d" id="ios-submit-btn" style="display: none;">
+                    <i class="fas fa-check-circle"></i> إظهار النتيجة
+                </button>
+            </div>
+        </div>
+        
+        <div class="ios-results-container" id="ios-results-container">
+            <h2>نتيجة الاختبار</h2>
+            <div class="ios-stats">
+                <div class="ios-stat-item ios-card-3d">
+                    <div class="ios-stat-value" id="ios-score-value">0</div>
+                    <div class="ios-stat-label">الدرجة</div>
+                </div>
+                <div class="ios-stat-item ios-card-3d">
+                    <div class="ios-stat-value" id="ios-percentage">0%</div>
+                    <div class="ios-stat-label">النسبة المئوية</div>
+                </div>
+                <div class="ios-stat-item ios-card-3d">
+                    <div class="ios-stat-value" id="ios-time-taken">00:00</div>
+                    <div class="ios-stat-label">الوقت المستغرق</div>
+                </div>
+            </div>
+            <div class="ios-feedback" id="ios-feedback"></div>
+            <button class="ios-btn ios-btn-primary ios-btn-3d" id="ios-restart-btn">
+                <i class="fas fa-redo"></i> إعادة الاختبار
+            </button>
+        </div>
+    </div>
+    
+    <!-- زر الرجوع للخلف - تصميم مربع -->
+    <div class="ios-back-btn ios-btn-3d" id="ios-back-btn" style="display: none;">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    
+    <!-- زر لوحة الإدارة العائم - تم إخفاؤه -->
+    <div class="ios-admin-toggle ios-btn-3d" id="ios-admin-toggle" style="display: none;">
+        <i class="fas fa-cog"></i>
+    </div>
+    
+    <!-- لوحة التحكم العائمة - تم إخفاؤها -->
+    <div class="ios-admin-panel" id="ios-admin-panel" style="display: none;">
+        <!-- محتوى لوحة الإدارة مخفي -->
+    </div>
+    
+    <!-- نافذة كلمة المرور الإدارية - تم إخفاؤها -->
+    <div class="ios-password-modal" id="ios-password-modal" style="display: none;">
+        <!-- محتوى نافذة كلمة المرور مخفي -->
+    </div>
+    
+    <!-- نافذة تعديل السؤال - تم إخفاؤها -->
+    <div class="ios-edit-modal" id="ios-edit-question-modal" style="display: none;">
+        <!-- محتوى نافذة التعديل مخفي -->
+    </div>
+    
+    <!-- طبقة التعتيم -->
+    <div class="ios-overlay" id="ios-overlay"></div>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+    <script>
+        // تهيئة Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBMJe0CVmxCrFthFmJEs5W_p1x3AFpFmHQ",
+            authDomain: "moaz-a8190.firebaseapp.com",
+            databaseURL: "https://moaz-a8190-default-rtdb.firebaseio.com",
+            projectId: "moaz-a8190",
+            storageBucket: "moaz-a8190.appspot.com",
+            messagingSenderId: "839870478124",
+            appId: "1:839870478124:web:2d47a304ada17206179e89",
+            measurementId: "G-LEJLEHCMG4"
+        };
+        
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        const auth = firebase.auth();
+        
+        // متغيرات التطبيق
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let questions = [];
+        let userAnswers = [];
+        let clickCount = 0;
+        let adminPassword = localStorage.getItem('adminPassword') || "gohary01010081147mo";
+        let categories = new Set();
+        let quizStartTime;
+        let timerInterval;
+        let timeLeft = 600;
+        let selectedYear = '';
+        let selectedSection = '';
+        let selectedSubject = '';
+        let subjects = [];
+        let sections = [];
+        let examActive = true;
+        let defaultExamTime = 10;
+        let currentUser = null;
+        let savedState = JSON.parse(localStorage.getItem('quizState')) || {};
+        let currentEditingQuestionId = null;
+        let currentAd = JSON.parse(localStorage.getItem('currentAd')) || null;
+
+        // عناصر DOM
+        const elements = {
+            // عناصر التطبيق الرئيسية
+            iosQuizContainer: document.getElementById('ios-quiz-container'),
+            iosQuestionContainer: document.getElementById('ios-question-container'),
+            iosResultsContainer: document.getElementById('ios-results-container'),
+            iosProgressBar: document.getElementById('ios-progress-bar'),
+            iosNextBtn: document.getElementById('ios-next-btn'),
+            iosPrevBtn: document.getElementById('ios-prev-btn'),
+            iosSubmitBtn: document.getElementById('ios-submit-btn'),
+            iosRestartBtn: document.getElementById('ios-restart-btn'),
+            iosQuizTitle: document.getElementById('ios-quiz-title'),
+            iosScoreDisplay: document.getElementById('ios-score-value'),
+            iosPercentageDisplay: document.getElementById('ios-percentage'),
+            iosTimeTakenDisplay: document.getElementById('ios-time-taken'),
+            iosFeedbackDisplay: document.getElementById('ios-feedback'),
+            logoContainer: document.getElementById('logo-container'),
+            iosAdminPanel: document.getElementById('ios-admin-panel'),
+            iosCloseAdmin: document.getElementById('ios-close-admin'),
+            iosPasswordModal: document.getElementById('ios-password-modal'),
+            iosPasswordInput: document.getElementById('ios-admin-password'),
+            iosPasswordSubmit: document.getElementById('ios-password-submit'),
+            iosPasswordCancel: document.getElementById('ios-password-cancel'),
+            iosPasswordError: document.getElementById('ios-password-error'),
+            iosQuizLoading: document.getElementById('ios-quiz-loading'),
+            iosCategoryFilter: document.getElementById('ios-category-filter'),
+            iosCategorySelect: document.getElementById('ios-category-select'),
+            iosTimerDisplay: document.getElementById('ios-timer'),
+            iosOverlay: document.getElementById('ios-overlay'),
+            yearSelectionContainer: document.getElementById('year-selection-container'),
+            sectionSelectionContainer: document.getElementById('section-selection-container'),
+            subjectSelectionContainer: document.getElementById('subject-selection-container'),
+            yearCards: document.querySelectorAll('.ios-year-card'),
+            iosBackBtn: document.getElementById('ios-back-btn'),
+            iosAdminTabs: document.querySelectorAll('.ios-admin-tab-btn'),
+            iosAdminTabContents: document.querySelectorAll('.ios-admin-tab-content'),
+            iosAdContainer: document.getElementById('ios-ad-container'),
+            sectionContainer: document.getElementById('section-container'),
+            subjectContainer: document.getElementById('subject-container'),
+            iosAdminToggle: document.getElementById('ios-admin-toggle'),
+            iosAdClose: document.getElementById('ios-ad-close'),
+            iosAdTitle: document.getElementById('ios-ad-title'),
+            iosAdDescription: document.getElementById('ios-ad-description'),
+            iosAdAction: document.getElementById('ios-ad-action'),
+            
+            // عناصر لوحة الإدارة (مخفية)
+            iosQuestionType: document.getElementById('ios-question-type'),
+            iosMcqOptions: document.getElementById('ios-mcq-options'),
+            iosTruefalseOptions: document.getElementById('ios-truefalse-options'),
+            iosAddQuestionBtn: document.getElementById('ios-add-question-btn'),
+            iosQuestionsList: document.getElementById('ios-questions-list'),
+            iosFilterYear: document.getElementById('ios-filter-year'),
+            iosFilterSection: document.getElementById('ios-filter-section'),
+            iosExamTime: document.getElementById('ios-exam-time'),
+            iosExamStatus: document.getElementById('ios-exam-status'),
+            iosAdminPasswordSetting: document.getElementById('ios-admin-password-setting'),
+            iosSaveSettingsBtn: document.getElementById('ios-save-settings-btn'),
+            iosTotalQuestions: document.getElementById('ios-total-questions'),
+            iosTotalQuizzes: document.getElementById('ios-total-quizzes'),
+            iosAvgScore: document.getElementById('ios-avg-score'),
+            iosActiveUsers: document.getElementById('ios-active-users'),
+            iosRecentResults: document.getElementById('ios-recent-results'),
+            iosNewSectionName: document.getElementById('ios-new-section-name'),
+            iosNewSectionDescription: document.getElementById('ios-new-section-description'),
+            iosNewSectionIcon: document.getElementById('ios-new-section-icon'),
+            iosAddSectionBtn: document.getElementById('ios-add-section-btn'),
+            iosSectionsList: document.getElementById('ios-sections-list'),
+            iosNewSubjectName: document.getElementById('ios-new-subject-name'),
+            iosNewSubjectDescription: document.getElementById('ios-new-subject-description'),
+            iosNewSubjectSection: document.getElementById('ios-new-subject-section'),
+            iosNewSubjectIcon: document.getElementById('ios-new-subject-icon'),
+            iosAddSubjectBtn: document.getElementById('ios-add-subject-btn'),
+            iosSubjectsList: document.getElementById('ios-subjects-list'),
+            iosQuestionSection: document.getElementById('ios-question-section'),
+            iosQuestionSubject: document.getElementById('ios-question-subject'),
+            iosAdTitleInput: document.getElementById('ios-ad-title-input'),
+            iosAdDescriptionInput: document.getElementById('ios-ad-description-input'),
+            iosAdUrlInput: document.getElementById('ios-ad-url-input'),
+            iosAdStatusInput: document.getElementById('ios-ad-status-input'),
+            iosSaveAdBtn: document.getElementById('ios-save-ad-btn'),
+            iosPreviewAdTitle: document.getElementById('ios-preview-ad-title'),
+            iosPreviewAdDescription: document.getElementById('ios-preview-ad-description'),
+            
+            // عناصر تعديل السؤال (مخفية)
+            iosEditQuestionModal: document.getElementById('ios-edit-question-modal'),
+            iosEditQuestionText: document.getElementById('ios-edit-question-text'),
+            iosEditQuestionType: document.getElementById('ios-edit-question-type'),
+            iosEditMcqOptions: document.getElementById('ios-edit-mcq-options'),
+            iosEditTruefalseOptions: document.getElementById('ios-edit-truefalse-options'),
+            iosEditOption1: document.getElementById('ios-edit-option1'),
+            iosEditOption2: document.getElementById('ios-edit-option2'),
+            iosEditOption3: document.getElementById('ios-edit-option3'),
+            iosEditOption4: document.getElementById('ios-edit-option4'),
+            iosEditCorrectAnswer1: document.getElementById('ios-edit-correct-1'),
+            iosEditCorrectAnswer2: document.getElementById('ios-edit-correct-2'),
+            iosEditCorrectAnswer3: document.getElementById('ios-edit-correct-3'),
+            iosEditCorrectAnswer4: document.getElementById('ios-edit-correct-4'),
+            iosEditTfCorrectAnswer: document.getElementById('ios-edit-tf-correct-answer'),
+            iosEditQuestionCategory: document.getElementById('ios-edit-question-category'),
+            iosEditQuestionDifficulty: document.getElementById('ios-edit-question-difficulty'),
+            iosEditQuestionYear: document.getElementById('ios-edit-question-year'),
+            iosEditQuestionSection: document.getElementById('ios-edit-question-section'),
+            iosEditQuestionSubject: document.getElementById('ios-edit-question-subject'),
+            iosSaveEditQuestionBtn: document.getElementById('ios-save-edit-question-btn'),
+            iosCancelEditQuestionBtn: document.getElementById('ios-cancel-edit-question-btn')
+        };
+
+        // تهيئة التطبيق
+        function initApp() {
+            setupEventListeners();
+            loadInitialData();
+            checkExamStatus();
+            restoreSavedState();
+            loadAd();
+            
+            // عرض الصفوف الدراسية مباشرة عند فتح التطبيق
+            elements.yearSelectionContainer.style.display = 'grid';
+            
+            window.addEventListener('beforeunload', saveCurrentState);
+        }
+        
+        // تحميل البيانات الأولية
+        function loadInitialData() {
+            loadSections();
+            loadSubjects();
+        }
+        
+        // تحميل الأقسام
+        function loadSections() {
+            const sectionsRef = database.ref('sections');
+            sectionsRef.on('value', (snapshot) => {
+                sections = [];
+                snapshot.forEach((childSnapshot) => {
+                    const section = childSnapshot.val();
+                    section.id = childSnapshot.key;
+                    sections.push(section);
+                });
+                
+                // تحديث القوائم المنسدلة في لوحة الإدارة
+                updateSectionDropdowns();
+            });
+        }
+        
+        // تحميل المواد
+        function loadSubjects() {
+            const subjectsRef = database.ref('subjects');
+            subjectsRef.on('value', (snapshot) => {
+                subjects = [];
+                snapshot.forEach((childSnapshot) => {
+                    const subject = childSnapshot.val();
+                    subject.id = childSnapshot.key;
+                    subjects.push(subject);
+                });
+                
+                // تحديث القوائم المنسدلة في لوحة الإدارة
+                updateSubjectDropdowns();
+            });
+        }
+        
+        // تحديث قوائم الأقسام المنسدلة
+        function updateSectionDropdowns() {
+            // تحديث قائمة الأقسام في إضافة سؤال
+            if (elements.iosQuestionSection) {
+                elements.iosQuestionSection.innerHTML = '';
+                sections.forEach(section => {
+                    const option = document.createElement('option');
+                    option.value = section.id;
+                    option.textContent = section.name;
+                    elements.iosQuestionSection.appendChild(option);
+                });
+            }
+            
+            // تحديث قائمة الأقسام في تعديل سؤال
+            if (elements.iosEditQuestionSection) {
+                elements.iosEditQuestionSection.innerHTML = '';
+                sections.forEach(section => {
+                    const option = document.createElement('option');
+                    option.value = section.id;
+                    option.textContent = section.name;
+                    elements.iosEditQuestionSection.appendChild(option);
+                });
+            }
+            
+            // تحديث قائمة الأقسام في إضافة مادة
+            if (elements.iosNewSubjectSection) {
+                elements.iosNewSubjectSection.innerHTML = '';
+                sections.forEach(section => {
+                    const option = document.createElement('option');
+                    option.value = section.id;
+                    option.textContent = section.name;
+                    elements.iosNewSubjectSection.appendChild(option);
+                });
+            }
+            
+            // تحديث قائمة الأقسام في التصفية
+            if (elements.iosFilterSection) {
+                elements.iosFilterSection.innerHTML = '<option value="">جميع الأقسام</option>';
+                sections.forEach(section => {
+                    const option = document.createElement('option');
+                    option.value = section.id;
+                    option.textContent = section.name;
+                    elements.iosFilterSection.appendChild(option);
+                });
+            }
+        }
+        
+        // تحديث قوائم المواد المنسدلة
+        function updateSubjectDropdowns() {
+            // تحديث قائمة المواد في إضافة سؤال
+            if (elements.iosQuestionSubject) {
+                elements.iosQuestionSubject.innerHTML = '<option value="">اختر المادة</option>';
+                subjects.forEach(subject => {
+                    const option = document.createElement('option');
+                    option.value = subject.id;
+                    option.textContent = subject.name;
+                    elements.iosQuestionSubject.appendChild(option);
+                });
+            }
+            
+            // تحديث قائمة المواد في تعديل سؤال
+            if (elements.iosEditQuestionSubject) {
+                elements.iosEditQuestionSubject.innerHTML = '<option value="">اختر المادة</option>';
+                subjects.forEach(subject => {
+                    const option = document.createElement('option');
+                    option.value = subject.id;
+                    option.textContent = subject.name;
+                    elements.iosEditQuestionSubject.appendChild(option);
+                });
+            }
+        }
+        
+        // استعادة الحالة المحفوظة
+        function restoreSavedState() {
+            if (savedState.selectedYear) {
+                selectedYear = savedState.selectedYear;
+                const yearCard = document.querySelector(`.ios-year-card[data-year="${selectedYear}"]`);
+                if (yearCard) yearCard.click();
+            }
+        }
+        
+        // حفظ الحالة الحالية
+        function saveCurrentState() {
+            const state = {
+                user: currentUser,
+                selectedYear: selectedYear,
+                selectedSection: selectedSection,
+                selectedSubject: selectedSubject
+            };
+            localStorage.setItem('quizState', JSON.stringify(state));
+        }
+        
+        // إعداد مستمعي الأحداث
+        function setupEventListeners() {
+            // اختيار الصف الدراسي
+            elements.yearCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    selectedYear = this.dataset.year;
+                    elements.yearSelectionContainer.style.display = 'none';
+                    elements.sectionSelectionContainer.style.display = 'block';
+                    elements.iosBackBtn.style.display = 'flex';
+                    
+                    const yearText = getYearText(selectedYear);
+                    elements.iosQuizTitle.textContent = `اختبار إختبارات سلاح الأزهري - ${yearText}`;
+                    
+                    loadSectionsForYear(selectedYear);
+                    saveCurrentState();
+                });
+            });
+            
+            // زر الرجوع للخلف
+            elements.iosBackBtn.addEventListener('click', function() {
+                if (elements.subjectSelectionContainer.style.display === 'block') {
+                    elements.subjectSelectionContainer.style.display = 'none';
+                    elements.sectionSelectionContainer.style.display = 'block';
+                    selectedSubject = '';
+                } else if (elements.sectionSelectionContainer.style.display === 'block') {
+                    elements.sectionSelectionContainer.style.display = 'none';
+                    elements.yearSelectionContainer.style.display = 'grid';
+                    elements.iosBackBtn.style.display = 'none';
+                    selectedSection = '';
+                } else if (elements.iosQuizContainer.style.display === 'block') {
+                    elements.iosQuizContainer.style.display = 'none';
+                    if (selectedSubject) {
+                        elements.subjectSelectionContainer.style.display = 'block';
+                    } else {
+                        elements.sectionSelectionContainer.style.display = 'block';
+                    }
+                }
+                
+                saveCurrentState();
+            });
+            
+            // الانتقال إلى السؤال التالي
+            elements.iosNextBtn.addEventListener('click', nextQuestion);
+            
+            // العودة إلى السؤال السابق
+            elements.iosPrevBtn.addEventListener('click', prevQuestion);
+            
+            // إرسال الاختبار
+            elements.iosSubmitBtn.addEventListener('click', submitQuiz);
+            
+            // إعادة الاختبار
+            elements.iosRestartBtn.addEventListener('click', restartQuiz);
+            
+            // إزالة الوصول إلى لوحة التحكم الإدارية
+            // elements.logoContainer.addEventListener('click', function() {
+            //     clickCount++;
+            //     
+            //     if (clickCount === 5) {
+            //         showPasswordModal();
+            //         clickCount = 0;
+            //     }
+            //     
+            //     setTimeout(() => {
+            //         if (clickCount > 0) clickCount--;
+            //     }, 3000);
+            // });
+            
+            // إزالة زر الإدارة العائم
+            // elements.iosAdminToggle.addEventListener('click', function() {
+            //     showPasswordModal();
+            // });
+            
+            // إزالة التحقق من كلمة المرور
+            // elements.iosPasswordSubmit.addEventListener('click', checkAdminPassword);
+            
+            // إزالة إلغاء نافذة كلمة المرور
+            // elements.iosPasswordCancel.addEventListener('click', function() {
+            //     elements.iosPasswordModal.style.display = 'none';
+            //     elements.iosPasswordInput.value = '';
+            //     elements.iosPasswordError.style.display = 'none';
+            // });
+            
+            // تصفية الإختبارات حسب التصنيف
+            elements.iosCategorySelect.addEventListener('change', function() {
+                filterQuestionsByCategory(this.value);
+            });
+            
+            // إزالة تبديل بين تبويبات لوحة التحكم
+            // elements.iosAdminTabs.forEach(tab => {
+            //     tab.addEventListener('click', function() {
+            //         switchAdminTab(this.dataset.tab);
+            //     });
+            // });
+            
+            // إزالة تغيير نوع السؤال في لوحة الإدارة
+            // if (elements.iosQuestionType) {
+            //     elements.iosQuestionType.addEventListener('change', function() {
+            //         if (this.value === 'mcq') {
+            //             elements.iosMcqOptions.style.display = 'block';
+            //             elements.iosTruefalseOptions.style.display = 'none';
+            //         } else {
+            //             elements.iosMcqOptions.style.display = 'none';
+            //             elements.iosTruefalseOptions.style.display = 'block';
+            //         }
+            //     });
+            // }
+            
+            // إزالة تغيير نوع السؤال في تعديل السؤال
+            // if (elements.iosEditQuestionType) {
+            //     elements.iosEditQuestionType.addEventListener('change', function() {
+            //         if (this.value === 'mcq') {
+            //             elements.iosEditMcqOptions.style.display = 'block';
+            //             elements.iosEditTruefalseOptions.style.display = 'none';
+            //         } else {
+            //             elements.iosEditMcqOptions.style.display = 'none';
+            //             elements.iosEditTruefalseOptions.style.display = 'block';
+            //         }
+            //     });
+            // }
+            
+            // إزالة إضافة سؤال جديد
+            // if (elements.iosAddQuestionBtn) {
+            //     elements.iosAddQuestionBtn.addEventListener('click', addNewQuestion);
+            // }
+            
+            // إزالة حفظ إعدادات النظام
+            // if (elements.iosSaveSettingsBtn) {
+            //     elements.iosSaveSettingsBtn.addEventListener('click', saveSystemSettings);
+            // }
+            
+            // إزالة إضافة قسم جديد
+            // if (elements.iosAddSectionBtn) {
+            //     elements.iosAddSectionBtn.addEventListener('click', addNewSection);
+            // }
+            
+            // إزالة إضافة مادة جديدة
+            // if (elements.iosAddSubjectBtn) {
+            //     elements.iosAddSubjectBtn.addEventListener('click', addNewSubject);
+            // }
+            
+            // إزالة حفظ تعديل السؤال
+            // if (elements.iosSaveEditQuestionBtn) {
+            //     elements.iosSaveEditQuestionBtn.addEventListener('click', saveEditedQuestion);
+            // }
+            
+            // إزالة إلغاء تعديل السؤال
+            // if (elements.iosCancelEditQuestionBtn) {
+            //     elements.iosCancelEditQuestionBtn.addEventListener('click', function() {
+            //         elements.iosEditQuestionModal.style.display = 'none';
+            //         elements.iosOverlay.classList.remove('active');
+            //     });
+            // }
+            
+            // إزالة تصفية الأسئلة في لوحة الإدارة
+            // if (elements.iosFilterYear && elements.iosFilterSection) {
+            //     elements.iosFilterYear.addEventListener('change', loadQuestionsForAdmin);
+            //     elements.iosFilterSection.addEventListener('change', loadQuestionsForAdmin);
+            // }
+            
+            // إزالة إدارة الإعلانات
+            // if (elements.iosSaveAdBtn) {
+            //     elements.iosSaveAdBtn.addEventListener('click', saveAd);
+            // }
+            
+            // إزالة تحديث معاينة الإعلان
+            // if (elements.iosAdTitleInput && elements.iosAdDescriptionInput) {
+            //     elements.iosAdTitleInput.addEventListener('input', updateAdPreview);
+            //     elements.iosAdDescriptionInput.addEventListener('input', updateAdPreview);
+            // }
+            
+            // إغلاق الإعلان
+            if (elements.iosAdClose) {
+                elements.iosAdClose.addEventListener('click', function() {
+                    elements.iosAdContainer.style.display = 'none';
+                });
+            }
+            
+            // فتح رابط الإعلان
+            if (elements.iosAdAction) {
+                elements.iosAdAction.addEventListener('click', function() {
+                    if (currentAd && currentAd.url) {
+                        window.open(currentAd.url, '_blank');
+                    }
+                });
+            }
+        }
+        
+        // تحميل الأقسام بناءً على الصف المختار
+        function loadSectionsForYear(year) {
+            elements.sectionContainer.innerHTML = '';
+            
+            // تصفية الأقسام التي تنتمي للصف المختار
+            const yearSections = sections.filter(section => 
+                section.grades && section.grades.includes(year)
+            );
+            
+            if (yearSections.length > 0) {
+                yearSections.forEach(section => {
+                    const sectionCard = document.createElement('div');
+                    sectionCard.className = 'ios-section-card ios-card-3d';
+                    sectionCard.dataset.section = section.id;
+                    sectionCard.innerHTML = `
+                        <i class="${section.icon}"></i>
+                        <h3>${section.name}</h3>
+                        <p>${section.description}</p>
+                    `;
+                    elements.sectionContainer.appendChild(sectionCard);
+                    
+                    sectionCard.addEventListener('click', function() {
+                        document.querySelectorAll('.ios-section-card').forEach(c => c.classList.remove('selected'));
+                        this.classList.add('selected');
+                        selectedSection = this.dataset.section;
+                        
+                        const sectionName = sections.find(s => s.id === selectedSection)?.name || '';
+                        elements.iosQuizTitle.textContent += ` - ${sectionName}`;
+                        
+                        loadSubjectsForSection(selectedSection);
+                        saveCurrentState();
+                    });
+                });
+            } else {
+                // عرض رسالة عدم وجود أقسام
+                elements.sectionContainer.innerHTML = `
+                    <div class="ios-no-questions" style="grid-column: 1 / -1;">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>لا توجد أقسام متاحة</h3>
+                        <p>لم يتم إضافة أقسام لهذا الصف بعد. الرجاء التواصل مع المشرف لإضافة الأقسام.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // تحميل المواد بناءً على القسم المختار
+        function loadSubjectsForSection(sectionId) {
+            elements.subjectContainer.innerHTML = '';
+            
+            // تصفية المواد التي تنتمي للقسم المختار
+            const sectionSubjects = subjects.filter(subject => 
+                subject.sectionId === sectionId
+            );
+            
+            if (sectionSubjects.length > 0) {
+                sectionSubjects.forEach(subject => {
+                    const subjectCard = document.createElement('div');
+                    subjectCard.className = 'ios-subject-card ios-card-3d';
+                    subjectCard.dataset.subject = subject.id;
+                    subjectCard.innerHTML = `
+                        <i class="fas ${subject.icon}"></i>
+                        <h3>${subject.name}</h3>
+                        <p>${subject.description}</p>
+                    `;
+                    
+                    subjectCard.addEventListener('click', function() {
+                        document.querySelectorAll('.ios-subject-card').forEach(c => c.classList.remove('selected'));
+                        this.classList.add('selected');
+                        selectedSubject = this.dataset.subject;
+                        
+                        const subjectName = subjects.find(s => s.id === selectedSubject)?.name || '';
+                        elements.iosQuizTitle.textContent += ` - ${subjectName}`;
+                        
+                        setTimeout(() => {
+                            elements.subjectSelectionContainer.style.display = 'none';
+                            elements.iosQuizContainer.style.display = 'block';
+                            loadQuestions();
+                        }, 500);
+                        
+                        saveCurrentState();
+                    });
+                    
+                    elements.subjectContainer.appendChild(subjectCard);
+                });
+                
+                elements.sectionSelectionContainer.style.display = 'none';
+                elements.subjectSelectionContainer.style.display = 'block';
+            } else {
+                // عرض رسالة عدم وجود مواد
+                elements.subjectContainer.innerHTML = `
+                    <div class="ios-no-questions" style="grid-column: 1 / -1;">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>لا توجد مواد متاحة</h3>
+                        <p>لم يتم إضافة مواد لهذا القسم بعد. الرجاء التواصل مع المشرف لإضافة المواد.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // تحميل الإختبارات من Firebase
+        function loadQuestions() {
+            elements.iosQuizLoading.style.display = 'flex';
+            elements.iosQuestionContainer.innerHTML = '';
+            
+            const questionsRef = database.ref('questions');
+            questionsRef.once('value', (snapshot) => {
+                questions = [];
+                categories = new Set(['all']);
+                
+                snapshot.forEach((childSnapshot) => {
+                    const question = childSnapshot.val();
+                    question.id = childSnapshot.key;
+                    
+                    // تصفية الأسئلة بناءً على الصف والقسم والمادة المختارة
+                    if (question.year === selectedYear && 
+                        question.section === selectedSection && 
+                        (!selectedSubject || question.subject === selectedSubject)) {
+                        questions.push(question);
+                        
+                        if (question.category) {
+                            categories.add(question.category);
+                        }
+                    }
+                });
+                
+                updateCategoryFilters();
+                
+                if (questions.length > 0) {
+                    startQuiz();
+                } else {
+                    showNoQuestionsMessage();
+                }
+                
+                elements.iosQuizLoading.style.display = 'none';
+            });
+        }
+        
+        // تحميل الأسئلة للإدارة - تم إزالتها
+        // function loadQuestionsForAdmin() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // تحديث إحصائيات لوحة الإدارة - تم إزالتها
+        // function updateAdminStats() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // تصفية الإختبارات حسب التصنيف
+        function filterQuestionsByCategory(selectedCategory) {
+            if (selectedCategory === 'all') {
+                loadQuestions();
+                return;
+            }
+            
+            elements.iosQuizLoading.style.display = 'flex';
+            elements.iosQuestionContainer.innerHTML = '';
+            
+            const filteredQuestions = questions.filter(q => q.category === selectedCategory);
+            
+            if (filteredQuestions.length > 0) {
+                questions = filteredQuestions;
+                currentQuestionIndex = 0;
+                score = 0;
+                userAnswers = Array(questions.length).fill(null);
+                showQuestion();
+                updateProgressBar();
+            } else {
+                showNoQuestionsMessage();
+            }
+            
+            elements.iosQuizLoading.style.display = 'none';
+        }
+        
+        // عرض رسالة عدم وجود إختبارات
+        function showNoQuestionsMessage() {
+            elements.iosQuestionContainer.innerHTML = `
+                <div class="ios-no-questions">
+                    <i class="fas fa-info-circle"></i> لا توجد إختبارات متاحة حالياً للصف والقسم المحدد. الرجاء المحاولة لاحقاً.
+                </div>
+            `;
+            elements.iosNextBtn.style.display = 'none';
+            elements.iosSubmitBtn.style.display = 'none';
+        }
+        
+        // تحديث قوائم التصنيفات
+        function updateCategoryFilters() {
+            elements.iosCategorySelect.innerHTML = '';
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category === 'all' ? 'جميع التصنيفات' : category;
+                elements.iosCategorySelect.appendChild(option);
+            });
+            
+            elements.iosCategoryFilter.style.display = categories.size > 2 ? 'block' : 'none';
+        }
+        
+        // بدء الاختبار
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = Array(questions.length).fill(null);
+            showQuestion();
+            updateProgressBar();
+            startTimer();
+            elements.iosQuizContainer.style.display = 'block';
+            elements.iosResultsContainer.style.display = 'none';
+            elements.iosBackBtn.style.display = 'flex';
+        }
+        
+        // بدء المؤقت
+        function startTimer() {
+            quizStartTime = new Date();
+            clearInterval(timerInterval);
+            timeLeft = defaultExamTime * 60;
+            
+            updateTimerDisplay();
+            
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+        
+        // تحديث عرض المؤقت
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            elements.iosTimerDisplay.querySelector('span').textContent = `الوقت المتبقي: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            
+            if (timeLeft <= 120) {
+                elements.iosTimerDisplay.classList.add('warning');
+            } else {
+                elements.iosTimerDisplay.classList.remove('warning');
+            }
+            
+            if (timeLeft <= 60) {
+                elements.iosTimerDisplay.classList.add('danger');
+            } else {
+                elements.iosTimerDisplay.classList.remove('danger');
+            }
+        }
+        
+        // إيقاف المؤقت
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+        
+        // حساب الوقت المستغرق
+        function calculateTimeTaken() {
+            const endTime = new Date();
+            const timeDiff = endTime - quizStartTime;
+            
+            const minutes = Math.floor(timeDiff / 60000);
+            const seconds = Math.floor((timeDiff % 60000) / 1000);
+            
+            return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+        
+        // عرض السؤال الحالي
+        function showQuestion() {
+            if (currentQuestionIndex >= questions.length) {
+                submitQuiz();
+                return;
+            }
+            
+            const question = questions[currentQuestionIndex];
+            let questionHTML = '';
+            
+            questionHTML += `
+                <div class="ios-question">
+                    <h3><span class="ios-question-number">${currentQuestionIndex + 1}</span> ${question.text}</h3>
+                    ${question.difficulty ? `<p><small>مستوى الصعوبة: ${getDifficultyText(question.difficulty)}</small></p>` : ''}
+            `;
+            
+            if (question.type === 'mcq') {
+                questionHTML += `<div class="ios-options">`;
+                
+                for (let i = 1; i <= 4; i++) {
+                    const option = question[`option${i}`];
+                    if (!option) continue;
+                    
+                    const isSelected = userAnswers[currentQuestionIndex] === i.toString();
+                    questionHTML += `
+                        <div class="ios-option ${isSelected ? 'selected' : ''}" data-answer="${i}">
+                            ${option}
+                            <i class="fas fa-check ios-option-icon"></i>
+                        </div>
+                    `;
+                }
+                
+                questionHTML += `</div>`;
+            } else {
+                questionHTML += `
+                    <div class="ios-true-false-options">
+                        <div class="ios-true-false-btn ${userAnswers[currentQuestionIndex] === 'true' ? 'selected' : ''}" data-answer="true">
+                            <i class="fas fa-check"></i> صح
+                        </div>
+                        <div class="ios-true-false-btn ${userAnswers[currentQuestionIndex] === 'false' ? 'selected' : ''}" data-answer="false">
+                            <i class="fas fa-times"></i> خطأ
+                        </div>
+                    </div>
+                `;
+            }
+            
+            questionHTML += `</div>`;
+            elements.iosQuestionContainer.innerHTML = questionHTML;
+            
+            // إضافة مستمعين للأحداث للخيارات
+            if (question.type === 'mcq') {
+                const options = document.querySelectorAll('.ios-option');
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        options.forEach(opt => opt.classList.remove('selected'));
+                        option.classList.add('selected');
+                        userAnswers[currentQuestionIndex] = option.dataset.answer;
+                    });
+                });
+            } else {
+                const trueFalseBtns = document.querySelectorAll('.ios-true-false-btn');
+                trueFalseBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        trueFalseBtns.forEach(b => b.classList.remove('selected'));
+                        btn.classList.add('selected');
+                        userAnswers[currentQuestionIndex] = btn.dataset.answer;
+                    });
+                });
+            }
+            
+            // تحديث حالة الأزرار
+            elements.iosPrevBtn.disabled = currentQuestionIndex === 0;
+            elements.iosNextBtn.style.display = currentQuestionIndex < questions.length - 1 ? 'flex' : 'none';
+            elements.iosSubmitBtn.style.display = currentQuestionIndex === questions.length - 1 ? 'flex' : 'none';
+        }
+        
+        // الحصول على نص مستوى الصعوبة
+        function getDifficultyText(difficulty) {
+            switch(difficulty) {
+                case 'easy': return 'سهل';
+                case 'medium': return 'متوسط';
+                case 'hard': return 'صعب';
+                default: return '';
+            }
+        }
+        
+        // تحديث شريط التقدم
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            elements.iosProgressBar.style.width = `${progress}%`;
+        }
+        
+        // الانتقال إلى السؤال التالي
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion();
+                updateProgressBar();
+            }
+        }
+        
+        // العودة إلى السؤال السابق
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion();
+                updateProgressBar();
+            }
+        }
+        
+        // إرسال الاختبار
+        function submitQuiz() {
+            stopTimer();
+            showResults();
+        }
+        
+        // عرض النتائج
+        function showResults() {
+            score = 0;
+            let feedbackHTML = '<h3>التصحيح:</h3><ul>';
+            
+            questions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = userAnswer === question.correctAnswer;
+                
+                if (isCorrect) {
+                    score++;
+                }
+                
+                feedbackHTML += `<li>
+                    <strong>السؤال ${index + 1}:</strong> ${question.text}<br>
+                    <span style="color: ${isCorrect ? 'green' : 'red'}">
+                        إجابتك: ${formatAnswer(question, userAnswer)} - 
+                        ${isCorrect ? 'صحيح' : 'خطأ (الإجابة الصحيحة: ' + formatAnswer(question, question.correctAnswer) + ')'}
+                    </span>
+                </li><br>`;
+            });
+            
+            feedbackHTML += '</ul>';
+            
+            elements.iosQuizContainer.style.display = 'none';
+            elements.iosResultsContainer.style.display = 'block';
+            elements.iosScoreDisplay.textContent = score;
+            
+            const percentage = Math.round((score / questions.length) * 100);
+            elements.iosPercentageDisplay.textContent = `${percentage}%`;
+            
+            let medal = '';
+            if (percentage >= 90) {
+                medal = '<i class="fas fa-medal gold"></i>';
+            } else if (percentage >= 75) {
+                medal = '<i class="fas fa-medal silver"></i>';
+            } else if (percentage >= 50) {
+                medal = '<i class="fas fa-medal bronze"></i>';
+            }
+            elements.iosPercentageDisplay.innerHTML += ` ${medal}`;
+            
+            elements.iosTimeTakenDisplay.textContent = calculateTimeTaken();
+            elements.iosFeedbackDisplay.innerHTML = feedbackHTML;
+            
+            saveQuizResult(score, questions.length);
+        }
+        
+        // حفظ نتيجة الاختبار
+        function saveQuizResult(score, totalQuestions) {
+            const result = {
+                score,
+                totalQuestions,
+                percentage: Math.round((score / totalQuestions) * 100),
+                timestamp: new Date().toISOString(),
+                timeTaken: calculateTimeTaken(),
+                year: selectedYear,
+                section: selectedSection,
+                subject: selectedSubject,
+                userId: currentUser ? currentUser.id : null,
+                userName: currentUser ? currentUser.name : 'زائر'
+            };
+            
+            const resultsRef = database.ref('quizResults');
+            resultsRef.push(result)
+                .catch(error => {
+                    console.error('Error saving quiz result:', error);
+                });
+        }
+        
+        // تنسيق الإجابة لعرضها
+        function formatAnswer(question, answer) {
+            if (!answer) return 'لم يتم الإجابة';
+            
+            if (question.type === 'mcq') {
+                return question[`option${answer}`] || answer;
+            } else {
+                return answer === 'true' ? 'صح' : 'خطأ';
+            }
+        }
+        
+        // إعادة الاختبار
+        function restartQuiz() {
+            elements.iosQuizContainer.style.display = 'block';
+            elements.iosResultsContainer.style.display = 'none';
+            currentQuestionIndex = 0;
+            userAnswers = Array(questions.length).fill(null);
+            startQuiz();
+        }
+        
+        // الحصول على نص الصف الدراسي
+        function getYearText(year) {
+            switch(year) {
+                case 'prep1': return 'الصف الأول الإعدادي';
+                case 'prep2': return 'الصف الثاني الإعدادي';
+                case 'prep3': return 'الصف الثالث الإعدادي';
+                default: return '';
+            }
+        }
+        
+        // إزالة عرض نافذة كلمة المرور
+        // function showPasswordModal() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة إغلاق لوحة التحكم
+        // function closeAdminPanel() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة التحقق من كلمة المرور
+        // function checkAdminPassword() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة تحميل الأقسام للإدارة
+        // function loadSectionsForAdmin() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة تحميل المواد للإدارة
+        // function loadSubjectsForAdmin() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة حذف قسم
+        // function deleteSection(sectionId) {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة حذف مادة
+        // function deleteSubject(subjectId) {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة حذف سؤال
+        // function deleteQuestion(questionId) {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة تعديل سؤال
+        // function editQuestion(questionId) {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة حفظ السؤال بعد التعديل
+        // function saveEditedQuestion() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // مراقبة حالة الاختبار
+        function checkExamStatus() {
+            const examStatusRef = database.ref('examStatus');
+            examStatusRef.on('value', (snapshot) => {
+                if (snapshot.exists()) {
+                    examActive = snapshot.val().active;
+                    defaultExamTime = snapshot.val().time || 10;
+                    
+                    if (!examActive) {
+                        elements.yearSelectionContainer.innerHTML = `
+                            <div class="ios-no-questions" style="grid-column: 1 / -1;">
+                                <i class="fas fa-exclamation-triangle"></i> 
+                                <h3>الاختبارات متوقفة حالياً</h3>
+                                <p>الرجاء المحاولة لاحقاً عندما يتم تفعيل الاختبارات من قبل المسؤول</p>
+                            </div>
+                        `;
+                    }
+                } else {
+                    examStatusRef.set({
+                        active: true,
+                        time: 10
+                    });
+                }
+            });
+        }
+        
+        // إزالة إضافة سؤال جديد
+        // function addNewQuestion() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة إضافة قسم جديد
+        // function addNewSection() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة إضافة مادة جديدة
+        // function addNewSubject() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة حفظ إعدادات النظام
+        // function saveSystemSettings() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة تبديل بين تبويبات لوحة التحكم
+        // function switchAdminTab(tabId) {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة إدارة الإعلانات
+        // function saveAd() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // إزالة تحديث معاينة الإعلان
+        // function updateAdPreview() {
+        //     // تم إزالة الوظيفة
+        // }
+        
+        // تحميل الإعلان
+        function loadAd() {
+            // محاولة تحميل الإعلان من Firebase أولاً
+            const adsRef = database.ref('ads');
+            adsRef.once('value', (snapshot) => {
+                if (snapshot.exists()) {
+                    const ad = snapshot.val();
+                    if (ad.status === 'active') {
+                        currentAd = ad;
+                        localStorage.setItem('currentAd', JSON.stringify(ad));
+                        displayAd(ad);
+                        return;
+                    }
+                }
+                
+                // إذا لم يكن هناك إعلان في Firebase، تحقق من التخزين المحلي
+                if (currentAd && currentAd.status === 'active') {
+                    displayAd(currentAd);
+                }
+            });
+        }
+        
+        // عرض الإعلان
+        function displayAd(ad) {
+            if (ad && ad.status === 'active') {
+                elements.iosAdTitle.textContent = ad.title;
+                elements.iosAdDescription.textContent = ad.description;
+                elements.iosAdContainer.style.display = 'block';
+                
+                // تحديث معاينة الإعلان في لوحة الإدارة
+                if (elements.iosAdTitleInput) {
+                    elements.iosAdTitleInput.value = ad.title;
+                    elements.iosAdDescriptionInput.value = ad.description;
+                    elements.iosAdUrlInput.value = ad.url || '';
+                    elements.iosAdStatusInput.value = ad.status;
+                    // updateAdPreview(); // تم إزالتها
+                }
+            }
+        }
+        
+        // بدء التطبيق
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
